@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Downloader</title>
+    <title>Premium All-in-One Downloader</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { background: #0a0a0a; color: #fff; font-family: sans-serif; text-align: center; padding: 20px; }
+        h1 { color: #00ff00; }
         .input-box { width: 90%; max-width: 400px; padding: 15px; margin: 20px 0; border-radius: 10px; border: 1px solid #333; background: #111; color: #fff; }
-        .btn { padding: 15px 30px; background: #00ff00; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; color: #000; width: 90%; max-width: 430px; }
-        .social-bar { margin-top: 30px; padding: 15px; background: #111; border-radius: 10px; display: flex; justify-content: center; gap: 20px; }
-        .social-bar a { color: #fff; text-decoration: none; font-weight: bold; }
+        .btn { padding: 15px 30px; background: #00ff00; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; color: #000; width: 90%; max-width: 430px; font-size: 16px; }
+        .social-bar { margin-top: 30px; display: flex; justify-content: center; gap: 40px; }
+        .social-bar a { color: #fff; text-decoration: none; font-size: 18px; font-weight: bold; }
+        .fa-facebook { color: #1877f2; }
+        .fa-youtube { color: #ff0000; }
     </style>
 </head>
 <body>
 
-    <h1>Premium Downloader</h1>
+    <h1>Premium All-in-One Downloader</h1>
+    <p>Your own private downloader tool</p>
+
     <input type="text" id="videoUrl" class="input-box" placeholder="Paste video link here...">
     <br>
     <button class="btn" onclick="startDownload()">🚀 DOWNLOAD NOW</button>
@@ -31,10 +36,9 @@
             if(url.length > 5) {
                 window.open("https://snapsave.app/?url=" + encodeURIComponent(url), "_blank");
             } else {
-                alert("Please paste a link first!");
+                alert("Please paste a valid video link!");
             }
         }
     </script>
 </body>
 </html>
-
