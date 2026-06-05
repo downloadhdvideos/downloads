@@ -3,49 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EASY URL DOWNLODER</title>
+    <title>Sheikh Lam Downloader</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: sans-serif; text-align: center; padding: 20px; }
-        h1 { color: #00ff00; }
-        .input-box { width: 90%; max-width: 400px; padding: 15px; margin: 20px 0; border-radius: 10px; border: 1px solid #333; background: #111; color: #fff; outline: none; }
-        .btn { padding: 15px 30px; background: #00ff00; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; color: #000; width: 90%; max-width: 430px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 400px; margin: 20px auto; }
-        .item { background: #1a1a1a; padding: 10px; border-radius: 8px; border: 1px solid #333; }
-        .creator { margin-top: 40px; color: #555; font-size: 14px; }
+        body { background: #000; color: #fff; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding: 20px; }
+        h1 { color: #00ff00; font-size: 24px; margin-bottom: 5px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .downloader-box { width: 100%; height: 500px; border: 2px solid #333; border-radius: 15px; background: #111; margin-top: 20px; }
+        .social-bar { margin-top: 20px; padding: 15px; background: #111; border-radius: 10px; display: flex; justify-content: center; gap: 20px; }
+        .social-bar a { color: #fff; font-size: 20px; text-decoration: none; }
+        .social-bar a:hover { color: #00ff00; }
+        .creator { margin-top: 20px; color: #888; font-size: 14px; }
     </style>
 </head>
 <body>
 
-    <h1>Premium Downloader</h1>
-    <p>Download HD Videos Instantly</p>
+    <div class="container">
+        <h1>Premium All-in-One Downloader</h1>
+        <p>Your own private downloader tool</p>
 
-    <input type="text" id="videoUrl" class="input-box" placeholder="Paste video link here...">
-    <br>
-    <button class="btn" onclick="downloadVideo()">🚀 DOWNLOAD NOW</button>
+        <iframe src="https://snapsave.app/" class="downloader-box"></iframe>
 
-    <div class="grid">
-        <div class="item"><i class="fab fa-tiktok"></i> TikTok</div>
-        <div class="item"><i class="fab fa-twitter"></i> Twitter</div>
-        <div class="item"><i class="fab fa-facebook"></i> Facebook</div>
-        <div class="item"><i class="fab fa-youtube"></i> YouTube</div>
+        <div class="social-bar">
+            <a href="https://facebook.com/your-profile-link" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://youtube.com/your-channel-link" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+
+        <div class="creator">
+            <p>Developed & Maintained by <b>Sheikh Lam</b></p>
+        </div>
     </div>
-
-    <div class="creator">
-        <p>Created by <b>Sheikh Lam</b></p>
-    </div>
-
-    <script>
-        function downloadVideo() {
-            var url = document.getElementById("videoUrl").value;
-            if(url === "") {
-                alert("Please paste a link first!");
-            } else {
-                // এটি ইউজারকে সরাসরি ডাউনলোড পেজে নিয়ে যাবে
-                window.open("https://snapsave.app/?url=" + encodeURIComponent(url), "_blank");
-            }
-        }
-    </script>
 
 </body>
 </html>
