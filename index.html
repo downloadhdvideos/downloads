@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Downloader</title>
+    <title>Premium Downloader | By Sheikh Lam</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background: #000; color: #fff; font-family: sans-serif; text-align: center; padding: 20px; }
+        body { background: #000; color: #fff; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 20px; }
         .box { width: 90%; max-width: 400px; padding: 15px; margin: 10px auto; border-radius: 12px; background: #111; border: 1px solid #333; color: #fff; }
         .btn { padding: 15px; background: #0f0; border: none; border-radius: 12px; font-weight: bold; width: 90%; max-width: 430px; cursor: pointer; color: #000; font-size: 16px; margin: 10px 0; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 400px; margin: 20px auto; }
         .link { padding: 12px; background: #111; border: 1px solid #333; border-radius: 10px; text-decoration: none; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; }
-        .footer { margin-top: 40px; color: #555; font-size: 14px; }
-        .footer b { color: #0f0; }
+        .creator { margin-top: 40px; color: #0f0; font-size: 16px; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <h1>Premium Downloader</h1>
-    <input type="text" id="url" class="box" placeholder="Paste video link here...">
+    <input type="text" id="url" class="box" placeholder="Paste link here...">
     <button class="btn" onclick="go()">🚀 DOWNLOAD NOW</button>
 
     <div class="grid">
@@ -27,24 +26,23 @@
         <div class="link"><i class="fab fa-threads" style="color:#fff"></i> Threads</div>
         <div class="link"><i class="fab fa-twitter" style="color:#1da1f2"></i> Twitter</div>
         
-        <a href="https://facebook.com/your-profile-link" class="link">
-            <i class="fab fa-facebook" style="color:#1877f2"></i> Facebook
-        </a>
-        
-        <a href="https://youtube.com/your-channel-link" class="link">
-            <i class="fab fa-youtube" style="color:#ff0000"></i> YouTube
-        </a>
+        <a href="https://facebook.com/your-profile-link" class="link"><i class="fab fa-facebook" style="color:#1877f2"></i> Facebook</a>
+        <a href="https://youtube.com/your-channel-link" class="link"><i class="fab fa-youtube" style="color:#ff0000"></i> YouTube</a>
     </div>
 
-    <div class="footer">
-        <p>Managed & Created by <b>Sheikh Lam</b></p>
+    <div class="creator">
+        <p>Created by Sheikh Lam</p>
     </div>
 
     <script>
         function go() {
             var v = document.getElementById("url").value;
-            if(v.length > 5) window.open("https://snapsave.app/?url=" + encodeURIComponent(v), "_blank");
-            else alert("Please paste a valid link!");
+            if(v.length > 5) {
+                // Ekhane tumar iccha moto control rakho
+                window.open("https://snapsave.app/?url=" + encodeURIComponent(v), "_blank");
+            } else {
+                alert("Please paste a valid link!");
+            }
         }
     </script>
 </body>
