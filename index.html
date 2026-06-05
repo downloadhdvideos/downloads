@@ -3,35 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium All-in-One Downloader</title>
+    <title>Premium Downloader</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Poppins', sans-serif; text-align: center; padding: 20px; }
-        .hero { margin: 50px 0; }
-        h1 { font-size: 2.5em; background: linear-gradient(90deg, #00ff00, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .input-box { width: 90%; max-width: 500px; padding: 18px; border-radius: 15px; border: none; background: #1a1a1a; color: #fff; border: 1px solid #333; margin-bottom: 20px; font-size: 16px; outline: none; }
-        .btn { padding: 18px 40px; background: linear-gradient(90deg, #00ff00, #00cc00); border: none; border-radius: 15px; font-weight: bold; cursor: pointer; color: #000; font-size: 18px; transition: 0.3s; }
-        .btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(0, 255, 0, 0.3); }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 400px; margin: 30px auto; }
-        .item { background: #1a1a1a; padding: 15px; border-radius: 10px; border: 1px solid #333; font-weight: 600; }
-        .social { margin-top: 50px; border-top: 1px solid #333; padding-top: 20px; }
-        .social a { color: #00d4ff; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        body { background: #0a0a0a; color: #fff; font-family: sans-serif; text-align: center; padding: 20px; }
+        h1 { color: #00ff00; margin-bottom: 5px; }
+        .input-box { width: 90%; max-width: 400px; padding: 15px; margin: 20px 0; border-radius: 10px; border: 1px solid #333; background: #111; color: #fff; }
+        .btn { padding: 15px 30px; background: #00ff00; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; color: #000; width: 90%; max-width: 430px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 400px; margin: 20px auto; }
+        .item { background: #1a1a1a; padding: 10px; border-radius: 8px; border: 1px solid #333; }
+        .social { margin-top: 30px; }
+        .social a { color: #00ff00; font-size: 24px; margin: 0 15px; text-decoration: none; }
+        .creator { margin-top: 40px; color: #555; font-size: 14px; }
     </style>
 </head>
 <body>
 
-    <div class="hero">
-        <h1>Premium Downloader</h1>
-        <p>Download Videos in High Quality Instantly</p>
-    </div>
+    <h1>Premium Downloader</h1>
+    <p>Download HD Videos Instantly</p>
 
-    <input type="text" class="input-box" placeholder="Paste your video link here...">
+    <input type="text" class="input-box" id="link" placeholder="Paste video link here...">
     <br>
     <button class="btn">🚀 DOWNLOAD NOW</button>
 
     <div class="grid">
-        <div class="item">✅ TikTok</div>
-        <div class="item">✅ Twitter (X)</div>
-        <div class="item">✅ Facebook</div>
-        <div class="item">✅ YouTube</div>
+        <div class="item"><i class="fab fa-tiktok"></i> TikTok</div>
+        <div class="item"><i class="fab fa-twitter"></i> Twitter</div>
+        <div class="item"><i class="fab fa-facebook"></i> Facebook</div>
+        <div class="item"><i class="fab fa-youtube"></i> YouTube</div>
     </div>
-    
+
+    <div class="social">
+        <p>Follow the Developer:</p>
+        <a href="https://facebook.com/your-profile" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://youtube.com/your-channel" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="creator">
+        <p>Created by <b>Sheikh Lam</b></p>
+    </div>
+
+</body>
+</html>
