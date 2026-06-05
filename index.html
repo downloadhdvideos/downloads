@@ -6,17 +6,19 @@
     <title>Premium Downloader</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background: #000; color: #fff; font-family: sans-serif; text-align: center; padding: 20px; margin: 0; }
-        .box { width: 90%; max-width: 400px; padding: 15px; margin: 10px auto; border-radius: 10px; background: #111; border: 1px solid #333; color: #fff; }
-        .btn { padding: 15px; background: #0f0; border: none; border-radius: 10px; font-weight: bold; width: 90%; max-width: 430px; cursor: pointer; color: #000; font-size: 16px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 400px; margin: 20px auto; }
-        .link { padding: 12px; background: #111; border: 1px solid #333; border-radius: 8px; text-decoration: none; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        body { background: #000; color: #fff; font-family: sans-serif; text-align: center; padding: 20px; }
+        .box { width: 90%; max-width: 400px; padding: 15px; margin: 10px auto; border-radius: 12px; background: #111; border: 1px solid #333; color: #fff; }
+        .btn { padding: 15px; background: #0f0; border: none; border-radius: 12px; font-weight: bold; width: 90%; max-width: 430px; cursor: pointer; color: #000; font-size: 16px; margin: 10px 0; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 400px; margin: 20px auto; }
+        .link { padding: 12px; background: #111; border: 1px solid #333; border-radius: 10px; text-decoration: none; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .footer { margin-top: 40px; color: #555; font-size: 14px; }
+        .footer b { color: #0f0; }
     </style>
 </head>
 <body>
 
     <h1>Premium Downloader</h1>
-    <input type="text" id="url" class="box" placeholder="Paste link here...">
+    <input type="text" id="url" class="box" placeholder="Paste video link here...">
     <button class="btn" onclick="go()">🚀 DOWNLOAD NOW</button>
 
     <div class="grid">
@@ -34,16 +36,16 @@
         </a>
     </div>
 
+    <div class="footer">
+        <p>Managed & Created by <b>Sheikh Lam</b></p>
+    </div>
+
     <script>
         function go() {
             var v = document.getElementById("url").value;
-            if(v.length > 5) {
-                window.open("https://snapsave.app/?url=" + encodeURIComponent(v), "_blank");
-            } else {
-                alert("Please paste a valid link!");
-            }
+            if(v.length > 5) window.open("https://snapsave.app/?url=" + encodeURIComponent(v), "_blank");
+            else alert("Please paste a valid link!");
         }
     </script>
 </body>
 </html>
-
