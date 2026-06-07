@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Video Downloader Zone</title>
+    <title>Social Media Premium Downloader</title>
     <style>
         body {
-            background-color: #0d0d13;
+            background-color: #0b0c10;
             color: #fff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
@@ -14,95 +14,141 @@
             padding: 20px;
         }
         .container {
-            max-width: 480px;
+            max-width: 500px;
             margin: 40px auto;
-            background: #161623;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-            border: 1px solid #2f2f44;
+            background: #1f2833;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            border: 2px solid #66fcf1;
         }
         h1 {
-            color: #00ff66;
+            color: #66fcf1;
             font-size: 26px;
             margin-bottom: 5px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
         .subtitle {
-            color: #aaa;
+            color: #c5a059;
             font-size: 13px;
             margin-bottom: 25px;
+            font-weight: 500;
         }
         .input-box {
             width: 90%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            border: 1px solid #444;
-            background-color: #1f1f33;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            border: 2px solid #45f3ff;
+            background-color: #0b0c10;
             color: #fff;
-            font-size: 14px;
+            font-size: 15px;
             outline: none;
             text-align: center;
         }
-        .input-box:focus {
-            border-color: #00ff66;
+        .btn-zone {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
         }
         .download-btn {
-            width: 95%;
-            background: #00ff66;
-            color: #000;
+            width: 96%;
+            color: #fff;
             border: none;
             padding: 15px;
-            border-radius: 8px;
+            border-radius: 10px;
             font-weight: bold;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 15px;
             transition: 0.3s;
             text-transform: uppercase;
         }
-        .download-btn:hover {
-            background: #00cc52;
-            box-shadow: 0 0 15px rgba(0,255,102,0.6);
+        /* নরমাল বাটনের ডিজাইন */
+        .btn-normal {
+            background: #45f3ff;
+            color: #000;
+        }
+        .btn-normal:hover {
+            box-shadow: 0 0 15px rgba(69, 243, 255, 0.6);
+        }
+        /* প্রিমিয়াম বাটনের ডিজাইন */
+        .btn-premium {
+            background: linear-gradient(90deg, #ff007f, #7928ca);
+            position: relative;
+            box-shadow: 0 4px 15px rgba(255, 0, 127, 0.3);
+        }
+        .btn-premium:hover {
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.8);
+            transform: scale(1.02);
+        }
+        .badge {
+            background-color: #00ff66;
+            color: #000;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 5px;
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Video Downloader Pro</h1>
-        <div class="subtitle">Paste Link & Download Instantly In High Quality</div>
+        <h1>PREMIUM DOWNLOADER</h1>
+        <div class="subtitle">Select Your Video Quality To Download</div>
 
-        <input type="text" class="input-box" placeholder="Paste Video URL Here...">
+        <input type="text" class="input-box" placeholder="Paste Video Link Here...">
 
-        <button class="download-btn" onclick="handleDownload()">🚀 DOWNLOAD NOW</button>
+        <div class="btn-zone">
+            <button class="download-btn btn-normal" onclick="downloadNormal()">⚡ Download Normal (Max 720p)</button>
+
+            <button class="download-btn btn-premium" onclick="downloadPremium()">
+                <span class="badge">POPULAR</span>
+                💎 Download Premium (1080p / 4K UHD)
+            </button>
+        </div>
     </div>
 
     <script>
-        function handleDownload() {
-            const inputLink = document.querySelector('.input-box').value; // ইউজার যে লিংক পেস্ট করবে
-            
-            // তোমার আসল Adsterra ইনকাম লিংক
-            const adsterraSmartLink = 'https://www.effectivecpmnetwork.com/rpxxawv9p3?key=1af96c150dd91a86f0bf6226f554c5d2';
-            
-            // তোমার জিপিলিঙ্ক থেকে জেনারেট হওয়া দুটি অপশন (যেকোনো একটি রুট হবে)
-            const gplinkPrimary = 'https://gplinks.co/bDpYz';
-            const gplinkBackup = 'https://pubnotepad.com/7ZrVHM';
+        // তোমার Adsterra Smartlink
+        const adsterraLink = 'https://www.effectivecpmnetwork.com/rpxxawv9p3?key=1af96c150dd91a86f0bf6226f554c5d2';
+        
+        // তোমার GPLinks এর শর্ট লিংক (MrBeast বা রিডাইরেক্ট লিংক)
+        const gplinkUrl = 'https://gplinks.co/bDpYz';
 
-            if (!inputLink) {
-                alert('Please paste a video link first!');
+        // ১. নরমাল ডাউনলোডের লজিক (শুধু Adsterra ফায়ার হবে)
+        function downloadNormal() {
+            const urlInput = document.querySelector('.input-box').value;
+            if (!urlInput) {
+                alert('Please paste a link first!');
                 return;
             }
-
-            // ১. প্রথমে নতুন ট্যাবে ব্যাকগ্রাউন্ডে তোমার Adsterra ইনকাম লিংক ওপেন হবে (১ম ইনকাম)
-            window.open(adsterraSmartLink, '_blank');
-            
-            // ২. ঠিক সাথে সাথে মেইন ট্যাবে GPLinks ওপেন হবে যা শর্টনারের অ্যাড দেখাবে (২য় ইনকাম)
-            // অ্যাড পার হওয়ার পর ইউজার সরাসরি MrBeast-এর সাবমেরিন ভিডিওতে চলে যাবে
+            // ব্যাকগ্রাউন্ডে অ্যাড ওপেন হবে
+            window.open(adsterraLink, '_blank');
+            // মেইন ট্যাবে সে সরাসরি তার কাঙ্ক্ষিত লিংকে চলে যাবে
             setTimeout(function() {
-                window.location.href = gplinkPrimary;
-            }, 300); 
+                window.location.href = urlInput;
+            }, 300);
+        }
+
+        // ২. প্রিমিয়াম ডাউনলোডের লজিক (Adsterra + GPLinks ডাবল ইনকাম)
+        function downloadPremium() {
+            const urlInput = document.querySelector('.input-box').value;
+            if (!urlInput) {
+                alert('Please paste a link first!');
+                return;
+            }
+            // ব্যাকগ্রাউন্ডে Adsterra অ্যাড ওপেন হবে
+            window.open(adsterraLink, '_blank');
+            // মেইন ট্যাবে GPLinks ওপেন হবে (যা পার করে সে আসল প্রিমিয়ামে যাবে)
+            setTimeout(function() {
+                window.location.href = gplinkUrl;
+            }, 300);
         }
     </script>
 
