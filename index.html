@@ -3,22 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Downloader | HD & Premium</title>
+    <title>Video Downloader</title>
     
-    <script type='text/javascript' src='https://pubnotepad.com/7ZrVHM'></script>
+    <script type='text/javascript' src='YOUR_ADSTERRA_DIRECT_LINK'></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        body { background-color: #0b1120; color: #fff; font-family: 'Poppins', sans-serif; text-align: center; padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .container { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 20px; padding: 40px; max-width: 400px; width: 100%; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
-        h1 { color: #38bdf8; font-size: 28px; margin-bottom: 30px; }
-        input { width: calc(100% - 24px); padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); background-color: rgba(255, 255, 255, 0.05); color: #fff; font-size: 16px; outline: none; }
-        .btn-group { display: flex; flex-direction: column; gap: 15px; }
-        button { padding: 14px; border: none; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer; transition: 0.3s; }
-        .btn-normal { background-color: transparent; color: #64748b; border: 2px solid rgba(100, 116, 139, 0.4); }
-        .btn-premium { background: linear-gradient(135deg, #f59e0b, #fbbf24); color: #1e293b; position: relative; }
-        .premium-tag { background-color: #ef4444; color: white; font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 20px; position: absolute; top: -10px; right: -10px; }
-        footer { margin-top: 40px; color: #4b5563; font-size: 12px; }
+        body { 
+            background-color: #0b1120; 
+            color: #fff; 
+            font-family: 'Poppins', sans-serif; 
+            text-align: center; 
+            padding: 20px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container { 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(56, 189, 248, 0.2); 
+            border-radius: 20px; 
+            padding: 40px; 
+            max-width: 400px; 
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+        }
+
+        h1 { 
+            color: #38bdf8; 
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px; 
+        }
+
+        input { 
+            width: calc(100% - 24px); 
+            padding: 12px; 
+            margin-bottom: 20px; 
+            border-radius: 8px; 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #38bdf8; 
+        }
+
+        .btn-group { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
+        }
+
+        button { 
+            padding: 14px; 
+            border: none; 
+            border-radius: 8px; 
+            font-weight: 600; 
+            font-size: 16px;
+            cursor: pointer; 
+            transition: 0.3s;
+            outline: none;
+        }
+
+        .btn-normal { 
+            background-color: transparent; 
+            color: #64748b; 
+            border: 2px solid rgba(100, 116, 139, 0.4);
+        }
+
+        .btn-normal:hover {
+            background-color: rgba(100, 116, 139, 0.1);
+            color: #fff;
+        }
+
+        .btn-premium { 
+            background: linear-gradient(135deg, #f59e0b, #fbbf24); 
+            color: #1e293b; 
+            position: relative;
+        }
+
+        .btn-premium:hover {
+            opacity: 0.9;
+        }
+
+        .premium-tag {
+            background-color: #ef4444; 
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 20px;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            text-transform: uppercase;
+        }
+
+        footer { 
+            margin-top: auto; 
+            color: #4b5563; 
+            font-size: 12px; 
+            padding-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -31,12 +127,12 @@
             <button class="btn-normal" onclick="downloadNormal()">Normal (Max 720p)</button>
             <button class="btn-premium" onclick="downloadPremium()">
                 Premium (1K+ HD)
-                <span class="premium-tag">POPULAR</span>
+                <span class="premium-tag">Unlock Now</span>
             </button>
         </div>
     </div>
 
-    <    <footer style="margin-top: 50px; text-align: center; padding: 20px;">
+        <footer style="margin-top: 50px; text-align: center; padding: 20px;">
         <p style="color: #64748b; font-size: 14px;">
             Powered by 
             <span style="
@@ -53,25 +149,27 @@
                 Sheikh Lam
             </span>
         </p>
-    </footer>
-        
-        <p>Created with 👑 by <strong>Sheikh Lam</strong></p>
+        </footer>
+    
+        <p>Created with ❤️ by <strong>Sheikh Lam</strong></p>
     </footer>
 
     <script>
+        // Normal Download (Free)
         function downloadNormal() {
             var url = document.getElementById('url').value;
             if(url) {
-                // নরমাল ডাউনলোডের লিংক এখানে দাও
-                window.location.href = "https://your-free-server.com/download?url=" + encodeURIComponent(url);
+                // সরাসরি ডাউনলোড লজিক বা অন্য কোনো ফ্রি লিংক
+                alert("Normal download initiated for (max 720p).");
             } else { alert("Link den boss!"); }
         }
 
+        // Premium Download (Gplinks)
         function downloadPremium() {
             var url = document.getElementById('url').value;
             if(url) {
-                // প্রিমিয়াম Gplinks লিংক
-                window.location.href = "https://gplinks.co/bDpYz?url=" + encodeURIComponent(url);
+                var gplinksUrl = "https://gplinks.com/api?api=YOUR_API_TOKEN&url="; 
+                window.location.href = gplinksUrl + encodeURIComponent(url);
             } else { alert("Link den boss!"); }
         }
     </script>
