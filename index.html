@@ -3,136 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Downloader</title>
+    <title>Premium Downloader</title>
     
-    <script type='text/javascript' src='YOUR_ADSTERRA_DIRECT_LINK'></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type='text/javascript' src='https://pubnotepad.com/7ZrVHM'></script>
 
     <style>
-        body { 
-            background-color: #0b1120; 
-            color: #fff; 
-            font-family: 'Poppins', sans-serif; 
-            text-align: center; 
-            padding: 20px; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
+        body { background-color: #0b1120; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        
+        /* ২ নম্বর পিকচারের মতো মেইন বক্স */
         .container { 
-            background: rgba(255, 255, 255, 0.03); 
-            border: 1px solid rgba(56, 189, 248, 0.2); 
+            background: #1a202c; 
+            border: 2px solid #38bdf8; 
             border-radius: 20px; 
             padding: 40px; 
+            width: 90%; 
             max-width: 400px; 
-            width: 100%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+            text-align: center; 
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
         }
 
-        h1 { 
-            color: #38bdf8; 
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 30px; 
-        }
+        h1 { color: #38bdf8; font-size: 24px; margin-bottom: 10px; }
+        p { color: #94a3b8; font-size: 14px; margin-bottom: 30px; }
 
-        input { 
-            width: calc(100% - 24px); 
-            padding: 12px; 
-            margin-bottom: 20px; 
-            border-radius: 8px; 
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background-color: rgba(255, 255, 255, 0.05);
-            color: #fff;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.3s;
-        }
+        input { width: 100%; padding: 15px; border-radius: 10px; border: none; background: #0b1120; color: #fff; margin-bottom: 20px; box-sizing: border-box; border: 1px solid #38bdf8; }
 
-        input:focus {
-            border-color: #38bdf8; 
-        }
+        /* বাটন ডিজাইন */
+        button { width: 100%; padding: 15px; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; margin-bottom: 15px; font-size: 16px; position: relative; }
 
-        .btn-group { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
-        }
+        .btn-normal { background: #38bdf8; color: #000; }
+        .btn-premium { background: linear-gradient(90deg, #38bdf8, #d946ef); color: #fff; }
 
-        button { 
-            padding: 14px; 
-            border: none; 
-            border-radius: 8px; 
-            font-weight: 600; 
-            font-size: 16px;
-            cursor: pointer; 
-            transition: 0.3s;
-            outline: none;
-        }
+        .popular-tag { background: #10b981; color: white; font-size: 10px; padding: 2px 8px; border-radius: 5px; position: absolute; top: -10px; right: 10px; }
 
-        .btn-normal { 
-            background-color: transparent; 
-            color: #64748b; 
-            border: 2px solid rgba(100, 116, 139, 0.4);
-        }
-
-        .btn-normal:hover {
-            background-color: rgba(100, 116, 139, 0.1);
-            color: #fff;
-        }
-
-        .btn-premium { 
-            background: linear-gradient(135deg, #f59e0b, #fbbf24); 
-            color: #1e293b; 
-            position: relative;
-        }
-
-        .btn-premium:hover {
-            opacity: 0.9;
-        }
-
-        .premium-tag {
-            background-color: #ef4444; 
-            color: white;
-            font-size: 10px;
-            font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 20px;
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            text-transform: uppercase;
-        }
-
-        footer { 
-            margin-top: auto; 
-            color: #4b5563; 
-            font-size: 12px; 
-            padding-top: 40px;
-        }
+        footer { margin-top: 30px; color: #64748b; font-size: 12px; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Downloader</h1>
-        <input type="text" id="url" placeholder="Paste link here...">
+        <h1>PREMIUM DOWNLOADER</h1>
+        <p>Select Your Video Quality To Download</p>
         
-        <div class="btn-group">
-            <button class="btn-normal" onclick="downloadNormal()">Normal (Max 720p)</button>
-            <button class="btn-premium" onclick="downloadPremium()">
-                Premium (1K+ HD)
-                <span class="premium-tag">Unlock Now</span>
-            </button>
-        </div>
-    </div>
+        <input type="text" id="url" placeholder="Paste Video Link Here...">
+        
+        <button class="btn-normal" onclick="downloadNormal()">⚡ DOWNLOAD NORMAL (MAX 720P)</button>
+        
+        <button class="btn-premium" onclick="downloadPremium()">
+            <span class="popular-tag">POPULAR</span>
+            💎 DOWNLOAD PREMIUM (1080P / 4K UHD)
+        </button>
 
-        <footer style="margin-top: 50px; text-align: center; padding: 20px;">
+            <footer style="margin-top: 50px; text-align: center; padding: 20px;">
         <p style="color: #64748b; font-size: 14px;">
             Powered by 
             <span style="
@@ -149,28 +70,23 @@
                 Sheikh Lam
             </span>
         </p>
+            </footer>
+        
+            <p>Created with 👑 by <strong>Sheikh Lam</strong></p>
         </footer>
-    
-        <p>Created with ❤️ by <strong>Sheikh Lam</strong></p>
-    </footer>
+    </div>
 
     <script>
-        // Normal Download (Free)
         function downloadNormal() {
             var url = document.getElementById('url').value;
-            if(url) {
-                // সরাসরি ডাউনলোড লজিক বা অন্য কোনো ফ্রি লিংক
-                alert("Normal download initiated for (max 720p).");
-            } else { alert("Link den boss!"); }
+            if(url) { window.location.href = "https://your-link.com?url=" + encodeURIComponent(url); } 
+            else { alert("Link den boss!"); }
         }
 
-        // Premium Download (Gplinks)
         function downloadPremium() {
             var url = document.getElementById('url').value;
-            if(url) {
-                var gplinksUrl = "https://gplinks.com/api?api=YOUR_API_TOKEN&url="; 
-                window.location.href = gplinksUrl + encodeURIComponent(url);
-            } else { alert("Link den boss!"); }
+            if(url) { window.location.href = "https://gplinks.co/bDpYz?url=" + encodeURIComponent(url); } 
+            else { alert("Link den boss!"); }
         }
     </script>
 </body>
