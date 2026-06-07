@@ -9,32 +9,15 @@
 
     <style>
         body { background-color: #0b1120; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        
-        /* ২ নম্বর পিকচারের মতো মেইন বক্স */
-        .container { 
-            background: #1a202c; 
-            border: 2px solid #38bdf8; 
-            border-radius: 20px; 
-            padding: 40px; 
-            width: 90%; 
-            max-width: 400px; 
-            text-align: center; 
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
-        }
-
+        .container { background: #1a202c; border: 2px solid #38bdf8; border-radius: 20px; padding: 40px; width: 90%; max-width: 400px; text-align: center; box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
         h1 { color: #38bdf8; font-size: 24px; margin-bottom: 10px; }
         p { color: #94a3b8; font-size: 14px; margin-bottom: 30px; }
-
         input { width: 100%; padding: 15px; border-radius: 10px; border: none; background: #0b1120; color: #fff; margin-bottom: 20px; box-sizing: border-box; border: 1px solid #38bdf8; }
-
-        /* বাটন ডিজাইন */
-        button { width: 100%; padding: 15px; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; margin-bottom: 15px; font-size: 16px; position: relative; }
-
+        button { width: 100%; padding: 15px; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; margin-bottom: 15px; font-size: 16px; position: relative; transition: 0.3s; }
+        button:hover { opacity: 0.9; }
         .btn-normal { background: #38bdf8; color: #000; }
         .btn-premium { background: linear-gradient(90deg, #38bdf8, #d946ef); color: #fff; }
-
         .popular-tag { background: #10b981; color: white; font-size: 10px; padding: 2px 8px; border-radius: 5px; position: absolute; top: -10px; right: 10px; }
-
         footer { margin-top: 30px; color: #64748b; font-size: 12px; }
     </style>
 </head>
@@ -53,25 +36,7 @@
             💎 DOWNLOAD PREMIUM (1080P / 4K UHD)
         </button>
 
-            <footer style="margin-top: 50px; text-align: center; padding: 20px;">
-        <p style="color: #64748b; font-size: 14px;">
-            Powered by 
-            <span style="
-                color: #38bdf8; 
-                font-weight: 700; 
-                text-transform: uppercase; 
-                letter-spacing: 2px;
-                text-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8;
-                padding: 5px 15px;
-                border: 1px solid #38bdf8;
-                border-radius: 5px;
-                background: rgba(56, 189, 248, 0.1);
-            ">
-                Sheikh Lam
-            </span>
-        </p>
-            </footer>
-        
+        <footer>
             <p>Created with 👑 by <strong>Sheikh Lam</strong></p>
         </footer>
     </div>
@@ -79,14 +44,16 @@
     <script>
         function downloadNormal() {
             var url = document.getElementById('url').value;
-            if(url) { window.location.href = "https://your-link.com?url=" + encodeURIComponent(url); } 
-            else { alert("Link den boss!"); }
+            if(url) { 
+                window.location.href = "https://snapsave.app/search?url=" + encodeURIComponent(url); 
+            } else { alert("Link den boss!"); }
         }
 
         function downloadPremium() {
             var url = document.getElementById('url').value;
-            if(url) { window.location.href = "https://gplinks.co/bDpYz?url=" + encodeURIComponent(url); } 
-            else { alert("Link den boss!"); }
+            if(url) { 
+                window.location.href = "https://gplinks.co/bDpYz?url=" + encodeURIComponent(url); 
+            } else { alert("Link den boss!"); }
         }
     </script>
 </body>
