@@ -3,41 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All-in-One Video Downloader | Free HD Video Download</title>
-    <meta name="description" content="Download videos from FB, Insta, TikTok and more for free in full HD without watermark using All-in-One Downloader.">
-    <meta name="keywords" content="all in one downloader, video downloader, free hd downloader, video downloader no watermark">
+    <title>Video Downloader | HD & Premium</title>
     
+    <script type='text/javascript' src='https://pubnotepad.com/7ZrVHM'></script>
+
     <style>
-        body { background-color: #121212; color: #fff; font-family: sans-serif; text-align: center; padding: 20px; }
-        .container { border: 2px solid #00d4ff; border-radius: 15px; padding: 30px; max-width: 500px; margin: auto; box-shadow: 0 0 15px #00d4ff; }
-        input { width: 80%; padding: 10px; border-radius: 5px; border: none; margin-bottom: 10px; }
-        button { background-color: #00d4ff; color: #000; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        body { background-color: #0f172a; color: #fff; font-family: sans-serif; text-align: center; padding: 20px; }
+        .container { border: 2px solid #38bdf8; border-radius: 20px; padding: 30px; max-width: 450px; margin: auto; box-shadow: 0 0 15px #38bdf8; }
+        input { width: 90%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: none; }
+        .btn-group { display: flex; flex-direction: column; gap: 10px; }
+        button { padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        .btn-normal { background-color: #475569; color: white; }
+        .btn-premium { background-color: #eab308; color: black; }
         footer { margin-top: 30px; color: #888; font-size: 14px; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Video Downloader</h1>
-        <p>Paste your link below to download:</p>
+        <h1>Downloader</h1>
         <input type="text" id="url" placeholder="Paste link here...">
-        <br>
-        <button onclick="download()">Download Now</button>
+        
+        <div class="btn-group">
+            <button class="btn-normal" onclick="downloadNormal()">Normal (Max 720p)</button>
+            <button class="btn-premium" onclick="downloadPremium()">Premium (1K+ HD)</button>
+        </div>
     </div>
 
     <footer>
-        <p>Created with ❤️ by <strong>Sheikh Lam</strong></p>
+        <p>Created with 👑 by <strong>Sheikh Lam</strong></p>
     </footer>
 
     <script>
-        function download() {
+        // Normal Download (Free)
+        function downloadNormal() {
             var url = document.getElementById('url').value;
             if(url) {
-                // এখানে তোমার GPLinks বা অন্য ইনকাম লিংকের লজিক বসবে
-                window.location.href = "YOUR_GPLINKS_OR_REDIRECT_LINK" + btoa(url);
-            } else {
-                alert("Please enter a valid link!");
-            }
+                // সরাসরি ডাউনলোড লজিক বা অন্য কোনো ফ্রি লিংক
+                window.location.href = "https://your-free-download-site.com/?url=" + btoa(url);
+            } else { alert("Link den boss!"); }
+        }
+
+        // Premium Download (Gplinks)
+        function downloadPremium() {
+            var url = document.getElementById8('url').value;
+            if(url) {
+                var gplinksUrl = "https://gplinks.co/bDpYz?url=";
+                window.location.href = gplinksUrl + encodeURIComponent(url);
+            } else { alert("Link den boss!"); }
         }
     </script>
 </body>
