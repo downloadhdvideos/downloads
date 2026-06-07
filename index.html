@@ -13,7 +13,7 @@
         .container { max-width: 400px; margin: auto; }
         h1 { font-size: 24px; margin-bottom: 20px; color: #fff; }
         #url { width: 100%; padding: 15px; border-radius: 15px; background: var(--glass); border: 1px solid #333; color: #fff; box-sizing: border-box; margin-bottom: 15px; outline: none; }
-        .btn { width: 100%; padding: 16px; background: var(--neon); border: none; border-radius: 15px; color: #000; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        .btn { width: 100%; padding: 16px; background: var(--neon); border: none; border-radius: 15px; color: #000; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; margin-bottom: 10px; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
         .link { padding: 15px; background: var(--glass); border-radius: 15px; text-decoration: none; color: #fff; font-size: 14px; border: 1px solid #222; display: flex; align-items: center; justify-content: center; gap: 8px; }
         .credit { margin-top: 40px; font-size: 12px; color: #666; }
@@ -24,7 +24,9 @@
 <div class="container">
     <h1>Premium Downloader</h1>
     <input type="text" id="url" placeholder="Paste link here...">
-    <button class="btn" onclick="go()">🚀 DOWNLOAD NOW</button>
+    
+    <button class="btn" onclick="go('snapsave')">🚀 DOWNLOAD NOW</button>
+    <button class="btn" onclick="go('yt')">📺 YOUTUBE DOWNLOADER</button>
 
     <div class="grid">
         <div class="link"><i class="fab fa-tiktok"></i> TikTok</div>
@@ -32,8 +34,8 @@
         <div class="link"><i class="fab fa-threads"></i> Threads</div>
         <div class="link"><i class="fab fa-twitter"></i> Twitter</div>
         
-        <a href="https://facebook.com/your-profile-link" class="link"><i class="fab fa-facebook"></i> Facebook</a>
-        <a href="https://youtube.com/your-channel-link" class="link"><i class="fab fa-youtube"></i> YouTube</a>
+        <a href="https://www.facebook.com/lam.sheikh.773981" class="link"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://www.youtube.com/@SheikhLam" class="link"><i class="fab fa-youtube"></i> YouTube</a>
     </div>
 
     <div class="credit">
@@ -42,10 +44,15 @@
 </div>
 
 <script>
-    function go() {
+    function go(type) {
         var v = document.getElementById("url").value;
-        if(v.length > 5) window.open("https://snapsave.app/?url=" + encodeURIComponent(v), "_blank");
-        else alert("Please paste a valid link!");
+        if(v.length < 5) { alert("Please paste a valid link!"); return; }
+        
+        if(type === 'snapsave') {
+            window.open("https://snapsave.app/?url=" + encodeURIComponent(v), "_blank");
+        } else if(type === 'yt') {
+            window.open("https://en.savefrom.net/1-youtube-video-downloader.html?url=" + encodeURIComponent(v), "_blank");
+        }
     }
 </script>
 </body>
